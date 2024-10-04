@@ -15,22 +15,19 @@
           - ansible
           - fwupd
           - smartmontools
-          - VirtualBox
           - chntpw
           - genisoimage
           - aria2
           - net-tools
-          - VirtualBox-7.0
-          - wireguard
           - wireguard-tools
-          - google-chrome
+          - VirtuslBox
+          - chromium
           - libxdo
           - guake
           - git-lfs
           - codium
           - grub-customizer
           - openvpn
-          - ffmpeg-libs
           - thunderbird
           - dnsmasq
           - firefox
