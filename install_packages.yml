@@ -111,15 +111,3 @@
       args:
         executable: /bin/bash
       become: no
-
-    - name: Install global npm packages
-      npm:
-        name: "{{ item }}"
-        global: yes
-      loop:
-        - "@bitwarden/cli"
-        - "@angular/cli"
-      become: no
-      environment:
-        PATH: "{{ ansible_env.HOME }}/.nvm/versions/node/{{ node_version }}/bin:{{ ansible_env.PATH }}"
-
