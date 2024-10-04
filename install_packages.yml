@@ -7,6 +7,32 @@
     nvm_version: "0.40.1"
     node_version: "lts/*"
   tasks:
+    - name: Import VirtualBox GPG key
+      rpm_key:
+        key: https://www.virtualbox.org/download/oracle_vbox_2016.asc
+        state: present
+
+    - name: Add VirtualBox repository
+      get_url:
+        url: https://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+        dest: /etc/yum.repos.d/virtualbox.repo
+        mode: '0644'
+    - name: Import VSCodium GPG key
+      rpm_key:
+        key: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
+        state: present
+
+    - name: Add VSCodium repository
+      yum_repository:
+        name: gitlab.com_paulcarroty_vscodium_repo
+        description: VSCodium repository
+        baseurl: https://download.vscodium.com/rpms/
+        enabled: yes
+        gpgcheck: yes
+        repo_gpgcheck: yes
+        gpgkey: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
+        metadata_expire: 1h
+
     - name: Install packages
       package:
         name:
@@ -20,7 +46,7 @@
           - aria2
           - net-tools
           - wireguard-tools
-          - VirtuslBox
+          - VirtualBox
           - chromium
           - libxdo
           - guake
