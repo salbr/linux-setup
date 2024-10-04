@@ -42,10 +42,6 @@ echo "Copying .bashrc and .inputrc..."
 cp .bashrc ~/.bashrc
 cp .inputrc ~/.inputrc
 
-# Source .bashrc and .inputrc
-echo "Sourcing .bashrc and .inputrc..."
-source ~/.bashrc
-bind -f ~/.inputrc
-
 echo "Setup complete!"
-echo "Please restart your terminal or run 'source ~/.bashrc' to ensure all changes are applied."
+echo "Please run 'source ~/.bashrc' to ensure all changes are applied."
+echo "Please run 'bind -f ~/.inputrc' to ensure all changes are applied."
