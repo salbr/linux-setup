@@ -33,6 +33,11 @@
         gpgkey: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
         metadata_expire: 1h
 
+    - name: Update package cache
+      dnf:
+        update_cache: yes
+      when: ansible_pkg_mgr == 'dnf'
+
     - name: Install packages
       package:
         name:
