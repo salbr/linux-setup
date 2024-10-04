@@ -67,15 +67,6 @@ This README explains the modifications and additions made to the default .bashrc
   alias codium=codium --enable-features=UseOzonePlatform --ozone-platform=wayland
   ```
 
-## Path Modifications
-
-- Adds several custom directories to the PATH:
-  ```bash
-  export PATH=/home/siggi/dev/git/zgrab2:$PATH
-  export PATH=/home/siggi/Downloads/owasp-dependency-checker/dependency-check/bin:$PATH
-  export PATH=/home/siggi/dev/git/git-quick-stats:$PATH
-  export PATH=$PATH:/usr/local/go/bin
-  ```
 
 ## Persistent History
 
