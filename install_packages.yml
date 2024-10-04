@@ -83,14 +83,6 @@
         disable_gpg_check: yes
       when: ansible_distribution == 'Fedora'
 
-    - name: Install ffmpeg-libs (allowing erasing)
-      package:
-        name: ffmpeg-libs
-        state: present
-      vars:
-        ansible_dnf_install_args: --allowerasing
-      when: ansible_pkg_mgr == 'dnf'
-
     - name: Download NVM installation script
       get_url:
         url: "https://raw.githubusercontent.com/nvm-sh/nvm/v{{ nvm_version }}/install.sh"
