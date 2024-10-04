@@ -38,6 +38,12 @@
         update_cache: yes
       when: ansible_pkg_mgr == 'dnf'
 
+    - name: Update all packages
+      dnf:
+        name: "*"
+        state: latest
+      when: ansible_pkg_mgr == 'dnf'
+
     - name: Install packages
       package:
         name:
