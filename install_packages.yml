@@ -57,7 +57,7 @@
           - aria2
           - net-tools
           - wireguard-tools
-          - VirtualBox
+          - VirtualBox-7.1
           - chromium
           - libxdo
           - guake
